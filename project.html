@@ -1,4 +1,8 @@
-<!-- ESP32 Project -->
+---
+layout: default
+title: ESP32 Real-Time DHT & RSSI Dashboard
+---
+
 <div class="skills-container">
   <div class="skill-box">
     <div class="text-container">
@@ -7,28 +11,28 @@
         Developed an ESP32-based system to read temperature and humidity from a DHT11 sensor and measure WiFi RSSI. Data is displayed on an OLED screen and streamed to a real-time web dashboard. The dashboard includes live charts for temperature and humidity and allows CSV download of historical data.
       </p>
 
-      <!-- Nouvelle section Branchement -->
+      <!-- Branchement des composants -->
       <h3>Branchement des composants</h3>
       <ul>
         <li><strong>DHT11</strong>
           <ul>
-            <li>S (Signal) → GPIO4 (D4)</li>
-            <li>+ (VCC) → Rail + (3V3) de la breadboard</li>
-            <li>– (GND) → Rail – (GND) de la breadboard</li>
+            <li>S (Signal) &rarr; GPIO4 (D4)</li>
+            <li>+ (VCC) &rarr; Rail + (3V3) de la breadboard</li>
+            <li>- (GND) &rarr; Rail - (GND) de la breadboard</li>
           </ul>
         </li>
         <li><strong>OLED SSD1306 (I2C)</strong>
           <ul>
-            <li>SDA → GPIO21 (D21)</li>
-            <li>SCL → GPIO22 (D22)</li>
-            <li>VCC → Rail + (3V3)</li>
-            <li>GND → Rail – (GND)</li>
+            <li>SDA &rarr; GPIO21 (D21)</li>
+            <li>SCL &rarr; GPIO22 (D22)</li>
+            <li>VCC &rarr; Rail + (3V3)</li>
+            <li>GND &rarr; Rail - (GND)</li>
           </ul>
         </li>
         <li><strong>Alimentation via la breadboard</strong>
           <ul>
-            <li>ESP32 3V3 → Rail rouge (+)</li>
-            <li>ESP32 GND → Rail bleu (–)</li>
+            <li>ESP32 3V3 &rarr; Rail rouge (+)</li>
+            <li>ESP32 GND &rarr; Rail bleu (-)</li>
             <li>DHT11 et OLED prennent leur alimentation depuis ces rails</li>
           </ul>
         </li>
