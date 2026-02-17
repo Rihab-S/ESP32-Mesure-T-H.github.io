@@ -1,6 +1,12 @@
-
-
-<link rel="stylesheet" href="{{ '/assets/css/project-style.css' | relative_url }}">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 Dashboard Project</title>
+  <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
 
 <div class="skills-container">
   <div class="skill-box">
@@ -10,7 +16,6 @@
         Developed an ESP32-based system to read temperature and humidity from a DHT11 sensor and measure WiFi RSSI. Data is displayed on an OLED screen and streamed to a real-time web dashboard. The dashboard includes live charts for temperature and humidity and allows CSV download of historical data.
       </p>
 
-      <!-- Tableau des connexions -->
       <h3>Branchement des composants</h3>
       <table>
         <thead>
@@ -34,7 +39,6 @@
             <td>GND</td>
             <td>Rail d’alimentation négatif (bleu)</td>
           </tr>
-
           <tr>
             <td rowspan="4">OLED SSD1306 (I2C)</td>
             <td>SDA</td>
@@ -52,7 +56,6 @@
             <td>GND</td>
             <td>Rail d’alimentation négatif (bleu)</td>
           </tr>
-
           <tr>
             <td rowspan="2">Alimentation</td>
             <td>ESP32 3.3V</td>
@@ -65,7 +68,6 @@
         </tbody>
       </table>
 
-      <!-- Résumé des GPIO -->
       <h3>Résumé des GPIO utilisés</h3>
       <table>
         <thead>
@@ -88,3 +90,6 @@
     </div>
   </div>
 </div>
+
+</body>
+</html>
