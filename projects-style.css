@@ -1,123 +1,50 @@
-/* General Body Styling */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-h1 {
-  color: #333;
-  margin-top: 20px;
-  font-size: 24px;
-}
-
-/* .skill-box {
-  background: white;
-  padding: 20px;
-  width: 80%;
-  min-height: 200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: transform 0.3s;
-  text-align: center;
-  margin: 15px 0;
-  box-sizing: border-box;
-}
- */
-.skill-box {
-  background: white;
-  padding: 20px;
-  width: 360px; /* Fixed width for consistency */
-  height: 280px; /* Fixed height to unify box sizes */
-  display: flex;
-  flex-direction: column; /* Align content vertically */
-  justify-content: space-between; /* Distribute content evenly */
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: transform 0.3s;
-  text-align: center;
-  margin: 15px;
-  box-sizing: border-box;
-}
+/* Styles pour project.html */
 
 .skills-container {
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
 }
 
-/* .text-container {
-  width: 55%; /* Adjust the width of the text container */
-} */
-.text-container {
+.skill-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.text-container h2 {
+  margin-top: 0;
+}
+
+table {
+  border-collapse: collapse;
   width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-top: 10px;
 }
 
-h2 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #222;
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
 }
 
 .date {
-  font-weight: bold;
   display: block;
   margin-top: 10px;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-/* 3D Image Container */
-.3d-image-container {
-  perspective: 1000px; /* Defines the distance from the viewer to create the 3D effect */
-  width: 40%; /* Adjust the width of the image container */
-  margin-right: 20px; /* Spacing between the image and text */
-}
-
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
-}
-
-.slideshow-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transition: opacity 1s ease-in-out, transform 0.3s ease;
-  border-radius: 8px;
-}
-
-.slideshow-image.active {
-  opacity: 1;
-  z-index: 1;
-  transform: scale(1);
-}
-
-/* Footer Styling */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f1f1f1;
   font-size: 0.9em;
-  width: 100%;
+  color: #555;
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 20px;
 }
