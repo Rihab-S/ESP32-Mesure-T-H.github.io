@@ -1,5 +1,4 @@
 
-
 <div class="skills-container">
   <div class="skill-box">
     <div class="text-container">
@@ -14,22 +13,22 @@
         <li><strong>DHT11</strong>
           <ul>
             <li>S (Signal) &rarr; GPIO4 (D4)</li>
-            <li>+ (VCC) &rarr; Rail + (3V3) de la breadboard</li>
-            <li>- (GND) &rarr; Rail - (GND) de la breadboard</li>
+            <li>VCC (3.3V) &rarr; Rail d’alimentation positif (rouge)</li>
+            <li>GND (Ground) &rarr; Rail d’alimentation négatif (bleu)</li>
           </ul>
         </li>
         <li><strong>OLED SSD1306 (I2C)</strong>
           <ul>
             <li>SDA &rarr; GPIO21 (D21)</li>
             <li>SCL &rarr; GPIO22 (D22)</li>
-            <li>VCC &rarr; Rail + (3V3)</li>
-            <li>GND &rarr; Rail - (GND)</li>
+            <li>VCC (3.3V) &rarr; Rail d’alimentation positif (rouge)</li>
+            <li>GND (Ground) &rarr; Rail d’alimentation négatif (bleu)</li>
           </ul>
         </li>
         <li><strong>Alimentation via la breadboard</strong>
           <ul>
-            <li>ESP32 3V3 &rarr; Rail rouge (+)</li>
-            <li>ESP32 GND &rarr; Rail bleu (-)</li>
+            <li>ESP32 3.3V &rarr; Rail d’alimentation positif (rouge)</li>
+            <li>ESP32 GND &rarr; Rail d’alimentation négatif (bleu)</li>
             <li>DHT11 et OLED prennent leur alimentation depuis ces rails</li>
           </ul>
         </li>
@@ -48,7 +47,7 @@
           <tr><td>DHT11 Signal</td><td>GPIO4</td></tr>
           <tr><td>OLED SDA</td><td>GPIO21</td></tr>
           <tr><td>OLED SCL</td><td>GPIO22</td></tr>
-          <tr><td>Alimentation</td><td>3V3 + GND</td></tr>
+          <tr><td>Alimentation</td><td>3.3V et GND via rails</td></tr>
         </tbody>
       </table>
 
