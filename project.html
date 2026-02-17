@@ -1,55 +1,6 @@
----
-layout: default
-title: ESP32 Real-Time DHT & RSSI Dashboard
----
 
-<style>
-/* Styles internes pour éviter les erreurs de build */
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 20px;
-}
 
-.skill-box {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  background-color: #f9f9f9;
-}
-
-.text-container h2 {
-  margin-top: 0;
-}
-
-ul {
-  margin: 10px 0;
-  padding-left: 20px;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 10px;
-}
-
-table, th, td {
-  border: 1px solid #ccc;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-}
-
-.date {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #555;
-}
-</style>
+<link rel="stylesheet" href="{{ '/assets/css/project-style.css' | relative_url }}">
 
 <div class="skills-container">
   <div class="skill-box">
@@ -59,32 +10,60 @@ th, td {
         Developed an ESP32-based system to read temperature and humidity from a DHT11 sensor and measure WiFi RSSI. Data is displayed on an OLED screen and streamed to a real-time web dashboard. The dashboard includes live charts for temperature and humidity and allows CSV download of historical data.
       </p>
 
-      <!-- Branchement des composants -->
+      <!-- Tableau des connexions -->
       <h3>Branchement des composants</h3>
-      <ul>
-        <li><strong>DHT11</strong>
-          <ul>
-            <li>S (Signal) &rarr; GPIO4 (D4)</li>
-            <li>VCC (3.3V) &rarr; Rail d’alimentation positif (rouge)</li>
-            <li>GND (Ground) &rarr; Rail d’alimentation négatif (bleu)</li>
-          </ul>
-        </li>
-        <li><strong>OLED SSD1306 (I2C)</strong>
-          <ul>
-            <li>SDA &rarr; GPIO21 (D21)</li>
-            <li>SCL &rarr; GPIO22 (D22)</li>
-            <li>VCC (3.3V) &rarr; Rail d’alimentation positif (rouge)</li>
-            <li>GND (Ground) &rarr; Rail d’alimentation négatif (bleu)</li>
-          </ul>
-        </li>
-        <li><strong>Alimentation via la breadboard</strong>
-          <ul>
-            <li>ESP32 3.3V &rarr; Rail d’alimentation positif (rouge)</li>
-            <li>ESP32 GND &rarr; Rail d’alimentation négatif (bleu)</li>
-            <li>DHT11 et OLED prennent leur alimentation depuis ces rails</li>
-          </ul>
-        </li>
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Composant</th>
+            <th>Pin Composant</th>
+            <th>GPIO / Destination</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">DHT11</td>
+            <td>Signal</td>
+            <td>GPIO4 (D4)</td>
+          </tr>
+          <tr>
+            <td>VCC (3.3V)</td>
+            <td>Rail d’alimentation positif (rouge)</td>
+          </tr>
+          <tr>
+            <td>GND</td>
+            <td>Rail d’alimentation négatif (bleu)</td>
+          </tr>
+
+          <tr>
+            <td rowspan="4">OLED SSD1306 (I2C)</td>
+            <td>SDA</td>
+            <td>GPIO21 (D21)</td>
+          </tr>
+          <tr>
+            <td>SCL</td>
+            <td>GPIO22 (D22)</td>
+          </tr>
+          <tr>
+            <td>VCC (3.3V)</td>
+            <td>Rail d’alimentation positif (rouge)</td>
+          </tr>
+          <tr>
+            <td>GND</td>
+            <td>Rail d’alimentation négatif (bleu)</td>
+          </tr>
+
+          <tr>
+            <td rowspan="2">Alimentation</td>
+            <td>ESP32 3.3V</td>
+            <td>Rail d’alimentation positif (rouge)</td>
+          </tr>
+          <tr>
+            <td>ESP32 GND</td>
+            <td>Rail d’alimentation négatif (bleu)</td>
+          </tr>
+        </tbody>
+      </table>
 
       <!-- Résumé des GPIO -->
       <h3>Résumé des GPIO utilisés</h3>
