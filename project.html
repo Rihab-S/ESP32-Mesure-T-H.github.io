@@ -1,95 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ESP32 Dashboard Project</title>
-  <link rel="stylesheet" href="project-style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de bord ESP32 en temps réel</title>
+  <link rel="stylesheet" href="projects-style.css" />
 </head>
 <body>
+  <header class="header">
+    <h1>Mes Projets</h1>
+  </header>
 
-<div class="skills-container">
-  <div class="skill-box">
-    <div class="text-container">
-      <h2>ESP32 Real-Time DHT & RSSI Dashboard</h2>
-      <p>
-        Developed an ESP32-based system to read temperature and humidity from a DHT11 sensor and measure WiFi RSSI. Data is displayed on an OLED screen and streamed to a real-time web dashboard. The dashboard includes live charts for temperature and humidity and allows CSV download of historical data.
-      </p>
+  <!-- Projet ESP32 -->
+  <div class="skills-container">
+    <div class="skill-box">
+      <div class="text-container">
+        <h2>Tableau de bord ESP32 en temps réel avec DHT & RSSI</h2>
+        <p>
+          Développé un système basé sur l'ESP32 pour lire la température et l'humidité à partir d'un capteur DHT11 et mesurer le RSSI du WiFi. 
+          Les données sont affichées sur un écran OLED et transmises à un tableau de bord web en temps réel. 
+          Le tableau de bord inclut des graphiques en direct pour la température et l'humidité et permet de télécharger les données historiques au format CSV.
+        </p>
 
-      <h3>Branchement des composants</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Composant</th>
-            <th>Pin Composant</th>
-            <th>GPIO / Destination</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowspan="3">DHT11</td>
-            <td>Signal</td>
-            <td>GPIO4 (D4)</td>
-          </tr>
-          <tr>
-            <td>VCC (3.3V)</td>
-            <td>Rail d’alimentation positif (rouge)</td>
-          </tr>
-          <tr>
-            <td>GND</td>
-            <td>Rail d’alimentation négatif (bleu)</td>
-          </tr>
-          <tr>
-            <td rowspan="4">OLED SSD1306 (I2C)</td>
-            <td>SDA</td>
-            <td>GPIO21 (D21)</td>
-          </tr>
-          <tr>
-            <td>SCL</td>
-            <td>GPIO22 (D22)</td>
-          </tr>
-          <tr>
-            <td>VCC (3.3V)</td>
-            <td>Rail d’alimentation positif (rouge)</td>
-          </tr>
-          <tr>
-            <td>GND</td>
-            <td>Rail d’alimentation négatif (bleu)</td>
-          </tr>
-          <tr>
-            <td rowspan="2">Alimentation</td>
-            <td>ESP32 3.3V</td>
-            <td>Rail d’alimentation positif (rouge)</td>
-          </tr>
-          <tr>
-            <td>ESP32 GND</td>
-            <td>Rail d’alimentation négatif (bleu)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Résumé des GPIO utilisés</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Fonction</th>
-            <th>GPIO ESP32</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>DHT11 Signal</td><td>GPIO4</td></tr>
-          <tr><td>OLED SDA</td><td>GPIO21</td></tr>
-          <tr><td>OLED SCL</td><td>GPIO22</td></tr>
-          <tr><td>Alimentation</td><td>3.3V et GND via rails</td></tr>
-        </tbody>
-      </table>
-
-      <span class="date">
-        <strong>Keywords:</strong> ESP32, MicroPython, DHT11, RSSI, OLED, WiFi, Real-Time Dashboard.
-      </span>
+        <span class="date">
+          <strong>Mots-clés :</strong> ESP32, MicroPython, DHT11, RSSI, OLED, WiFi, Tableau de bord temps réel, Chart.js.
+        </span>
+      </div>
     </div>
   </div>
-</div>
-
 </body>
 </html>
